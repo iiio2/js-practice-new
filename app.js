@@ -9,16 +9,28 @@
 
 // A factory function is a function that returns a new object. //
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log('draw');
-    },
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log('draw');
+//     },
+//   };
+// }
+
+// const circle1 = createCircle(5);
+// console.log(circle1);
+// const circle2 = createCircle(2);
+// console.log(circle2);
+
+// Constructor Fucntion
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log('Draw');
   };
 }
 
-const circle1 = createCircle(5);
-console.log(circle1);
-const circle2 = createCircle(2);
-console.log(circle2);
+const circle = new Circle(5);
+console.log(circle);
