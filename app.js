@@ -37,15 +37,34 @@
 
 // Dynamic Nature of objects;
 
-const circle = {
-  radius: 1,
-};
+// const circle = {
+//   radius: 1,
+// };
 
-circle.color = 'yellow';
-circle.draw = function () {
-  console.log('Draw');
-};
+// circle.color = 'yellow';
+// circle.draw = function () {
+//   console.log('Draw');
+// };
 
-delete circle.color;
+// delete circle.color;
 
-console.log(circle);
+// console.log(circle);
+
+// 5. Constructor Property;
+
+function createCircle(radius) {
+  return {
+    radius,
+  };
+}
+
+const circle1 = createCircle(1);
+
+function Circle(radius) {
+  this.radius = radius;
+}
+
+const circle2 = new Circle(5);
+
+console.log(circle1.constructor);
+console.log(circle2.constructor);
