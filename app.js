@@ -25,12 +25,27 @@
 
 // Constructor Fucntion
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log('Draw');
-  };
-}
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log('Draw');
+//   };
+// }
 
-const circle = new Circle(5);
+// const circle = new Circle(5);
+// console.log(circle);
+
+// Dynamic Nature of objects;
+
+const circle = {
+  radius: 1,
+};
+
+circle.color = 'yellow';
+circle.draw = function () {
+  console.log('Draw');
+};
+
+delete circle.color;
+
 console.log(circle);
