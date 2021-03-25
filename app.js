@@ -82,6 +82,19 @@
 
 // 8. Enumerating Properties of an object;
 
+// const circle = {
+//   radius: 1,
+//   draw: function () {
+//     console.log('Draw');
+//   },
+// };
+
+// for (key in circle) {
+//   console.log(key, circle[key]);
+// }
+
+// 9. Cloning an object
+
 const circle = {
   radius: 1,
   draw: function () {
@@ -89,6 +102,21 @@ const circle = {
   },
 };
 
-for (key in circle) {
-  console.log(key, circle[key]);
+const another = {};
+
+for (let key in circle) {
+  another[key] = circle[key];
 }
+
+const another1 = Object.assign({}, circle);
+const another2 = { ...circle };
+
+console.log(another);
+console.log(another1);
+console.log(another2);
+
+const arr = ['mango', 'orange'];
+const arr1 = { ...arr };
+arr2 = Object.assign({}, arr);
+console.log(arr1);
+console.log(arr2);
