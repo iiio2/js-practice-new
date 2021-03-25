@@ -214,10 +214,20 @@
 
 // 13. Every & Some
 
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
-const allPositive = numbers.every(function (value) {
-  return value >= 0;
-});
+// const allPositive = numbers.every(function (value) {
+//   return value >= 0;
+// });
 
-console.log(allPositive);
+// console.log(allPositive);
+
+// Map
+
+const numbers = [1, 2, 3, 4];
+
+const items = numbers
+  .map((number) => ({ value: number }))
+  .filter((obj) => obj.value > 2)
+  .map((value) => value.value);
+console.log(items);
