@@ -95,28 +95,33 @@
 
 // 9. Cloning an object
 
-const circle = {
-  radius: 1,
-  draw: function () {
-    console.log('Draw');
-  },
-};
+// const circle = {
+//   radius: 1,
+//   draw: function () {
+//     console.log('Draw');
+//   },
+// };
 
-const another = {};
+// const another = {};
 
-for (let key in circle) {
-  another[key] = circle[key];
-}
+// for (let key in circle) {
+//   another[key] = circle[key];
+// }
 
-const another1 = Object.assign({}, circle);
-const another2 = { ...circle };
+// const another1 = Object.assign({}, circle);
+// const another2 = { ...circle };
 
-console.log(another);
-console.log(another1);
-console.log(another2);
+// console.log(another);
+// console.log(another1);
+// console.log(another2);
 
-const arr = ['mango', 'orange'];
-const arr1 = { ...arr };
-arr2 = Object.assign({}, arr);
-console.log(arr1);
-console.log(arr2);
+// const arr = ['mango', 'orange'];
+// const arr1 = { ...arr };
+// arr2 = Object.assign({}, arr);
+// console.log(arr1);
+// console.log(arr2);
+
+// Date
+const now = new Date();
+
+console.log(now.toDateString());
