@@ -73,9 +73,22 @@
 
 // 7. Value vs. Reference Types
 
-let x = 10;
-let y = x;
+// let x = 10;
+// let y = x;
 
-x = 20;
+// x = 20;
 
-console.log(y); // y = 10 because it is copied value type or primitive type, not reference type.
+// console.log(y); // y = 10 because it is copied value type or primitive type, not reference type.
+
+// 8. Enumerating Properties of an object;
+
+const circle = {
+  radius: 1,
+  draw: function () {
+    console.log('Draw');
+  },
+};
+
+for (key in circle) {
+  console.log(key, circle[key]);
+}
