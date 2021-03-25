@@ -149,3 +149,19 @@ function Address(street, city, zipCode) {
 
 const address1 = new Address('a', 'b', 'c');
 console.log(address1);
+const address2 = new Address('a', 'b', 'c');
+
+// 17. Are equal
+
+function areEqual(address1, address2) {
+  const value1 = Object.values(address1);
+  const value2 = Object.values(address2);
+
+  value1.forEach((value) => {
+    if (value2.includes(value)) {
+      console.log('true');
+    }
+  });
+}
+
+areEqual(address1, address2);
