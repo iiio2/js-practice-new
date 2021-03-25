@@ -170,14 +170,29 @@
 
 // 4. Finding element "Reference Types"
 
-const courses = [
-  { id: 1, name: 'a' },
-  { id: 2, name: 'b' },
-];
+// const courses = [
+//   { id: 1, name: 'a' },
+//   { id: 2, name: 'b' },
+// ];
 
-// In ref.types "find" can be used, not "includes";
+// // In ref.types "find" can be used, not "includes";
 
-const course = courses.find((element) => element.id === 1);
-console.log(course);
-const index = courses.findIndex((course) => course.id === 2);
-console.log(index);
+// const course = courses.find((element) => element.id === 1);
+// console.log(course);
+// const index = courses.findIndex((course) => course.id === 2);
+// console.log(index);
+
+// 7. Emptying an array;
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.splice(0);
+
+// console.log(numbers);
+
+// 8. Combine & Slice
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const combine = first.concat(second);
+console.log(combine);
