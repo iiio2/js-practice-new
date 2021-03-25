@@ -122,6 +122,30 @@
 // console.log(arr2);
 
 // Date
-const now = new Date();
+// const now = new Date();
 
-console.log(now.toDateString());
+// console.log(now.toDateString());
+
+// 16. Factory & Constructor Function Exercise
+
+// factory
+const address = () => {
+  return {
+    street: 'a',
+    city: 'b',
+    zipCode: 'c',
+  };
+};
+
+console.log(address());
+
+// constructor
+
+function Address(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
+}
+
+const address1 = new Address('a', 'b', 'c');
+console.log(address1);
