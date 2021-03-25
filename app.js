@@ -199,15 +199,25 @@
 
 // 12.  Sorting
 
-const courses = [
-  { id: 1, name: 'Node js' },
-  { id: 2, name: 'JavaScript' },
-];
+// const courses = [
+//   { id: 1, name: 'Node js' },
+//   { id: 2, name: 'JavaScript' },
+// ];
 
-const compare = courses.sort((a, b) => {
-  if (a.name < b.name) return -1;
-  if (a.name > b.name) return 1;
-  return 0;
+// const compare = courses.sort((a, b) => {
+//   if (a.name < b.name) return -1;
+//   if (a.name > b.name) return 1;
+//   return 0;
+// });
+
+// console.log(compare);
+
+// 13. Every & Some
+
+const numbers = [1, 2, 3];
+
+const allPositive = numbers.every(function (value) {
+  return value >= 0;
 });
 
-console.log(compare);
+console.log(allPositive);
