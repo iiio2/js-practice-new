@@ -50,21 +50,32 @@
 
 // console.log(circle);
 
-// 5. Constructor Property;
+// // 5. Constructor Property;
 
-function createCircle(radius) {
-  return {
-    radius,
-  };
-}
+// function createCircle(radius) {
+//   return {
+//     radius,
+//   };
+// }
 
-const circle1 = createCircle(1);
+// const circle1 = createCircle(1);
 
-function Circle(radius) {
-  this.radius = radius;
-}
+// function Circle(radius) {
+//   this.radius = radius;
+// }
 
-const circle2 = new Circle(5);
+// const circle2 = new Circle(5);
 
-console.log(circle1.constructor);
-console.log(circle2.constructor);
+// console.log(circle1.constructor);
+// console.log(circle2.constructor);
+
+// 6. Functions are objects;
+
+// 7. Value vs. Reference Types
+
+let x = 10;
+let y = x;
+
+x = 20;
+
+console.log(y); // y = 10 because it is copied value type or primitive type, not reference type.
