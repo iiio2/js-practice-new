@@ -191,8 +191,23 @@
 // console.log(numbers);
 
 // 8. Combine & Slice
-const first = [1, 2, 3];
-const second = [4, 5, 6];
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
 
-const combine = first.concat(second);
-console.log(combine);
+// const combine = first.concat(second);
+// console.log(combine);
+
+// 12.  Sorting
+
+const courses = [
+  { id: 1, name: 'Node js' },
+  { id: 2, name: 'JavaScript' },
+];
+
+const compare = courses.sort((a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});
+
+console.log(compare);
