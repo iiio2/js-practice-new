@@ -129,39 +129,55 @@
 // 16. Factory & Constructor Function Exercise
 
 // factory
-const address = () => {
-  return {
-    street: 'a',
-    city: 'b',
-    zipCode: 'c',
-  };
-};
+// const address = () => {
+//   return {
+//     street: 'a',
+//     city: 'b',
+//     zipCode: 'c',
+//   };
+// };
 
-console.log(address());
+// console.log(address());
 
-// constructor
+// // constructor
 
-function Address(street, city, zipCode) {
-  this.street = street;
-  this.city = city;
-  this.zipCode = zipCode;
-}
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
 
-const address1 = new Address('a', 'b', 'c');
-console.log(address1);
-const address2 = new Address('a', 'b', 'c');
+// const address1 = new Address('a', 'b', 'c');
+// console.log(address1);
+// const address2 = new Address('a', 'b', 'c');
 
-// 17. Are equal
+// // 17. Are equal
 
-function areEqual(address1, address2) {
-  const value1 = Object.values(address1);
-  const value2 = Object.values(address2);
+// function areEqual(address1, address2) {
+//   const value1 = Object.values(address1);
+//   const value2 = Object.values(address2);
 
-  value1.forEach((value) => {
-    if (value2.includes(value)) {
-      console.log('true');
-    }
-  });
-}
+//   value1.forEach((value) => {
+//     if (value2.includes(value)) {
+//       console.log('true');
+//     }
+//   });
+// }
 
-areEqual(address1, address2);
+// areEqual(address1, address2);
+
+// Array
+
+// 4. Finding element "Reference Types"
+
+const courses = [
+  { id: 1, name: 'a' },
+  { id: 2, name: 'b' },
+];
+
+// In ref.types "find" can be used, not "includes";
+
+const course = courses.find((element) => element.id === 1);
+console.log(course);
+const index = courses.findIndex((course) => course.id === 2);
+console.log(index);
