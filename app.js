@@ -269,15 +269,41 @@
 
 // Except
 
-function except(array, excluded) {
-  let output = [];
-  for (let n of array) {
-    if (!excluded.includes(n)) {
-      output.push(n);
-    }
-  }
-  return output;
-}
+// function except(array, excluded) {
+//   let output = [];
+//   for (let n of array) {
+//     if (!excluded.includes(n)) {
+//       output.push(n);
+//     }
+//   }
+//   return output;
+// }
 
-const numbers = except([1, 2, 3, 4, 5], [1, 2]);
-console.log(numbers);
+// const numbers = except([1, 2, 3, 4, 5], [1, 2]);
+// console.log(numbers);
+
+// Movies
+
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
+];
+
+console.log(movies);
+
+const filteredMovie = movies.filter(
+  (movie) => movie.year === 2018 && movie.rating > 4
+);
+const sortedMovie = filteredMovie.sort((a, b) => {
+  return b.rating - a.rating;
+});
+
+// const pickTitle = sortedMovie.forEach((movie) => console.log(movie.title));
+
+// for (let movie of sortedMovie) {
+//   console.log(movie.title);
+// }
+
+sortedMovie.map((movie) => movie.title).forEach((movie) => console.log(movie));
