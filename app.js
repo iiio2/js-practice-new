@@ -224,10 +224,36 @@
 
 // Map
 
+// const numbers = [1, 2, 3, 4];
+
+// const items = numbers
+//   .map((number) => ({ value: number }))
+//   .filter((obj) => obj.value > 2)
+//   .map((value) => value.value);
+// console.log(items);
+
+// Reduce
+
 const numbers = [1, 2, 3, 4];
 
-const items = numbers
-  .map((number) => ({ value: number }))
-  .filter((obj) => obj.value > 2)
-  .map((value) => value.value);
-console.log(items);
+// let total = 0;
+// for( let n of numbers ){
+//   total += n;
+// }
+// console.log(total);
+
+const total = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
+console.log(total);
+
+function arrayFromRange(min, max) {
+  let output = [];
+  for (let i = min; i <= max; i++) {
+    output.push(i);
+  }
+  return output;
+}
+
+const range = arrayFromRange(1, 5);
+console.log(range);
