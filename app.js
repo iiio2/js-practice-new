@@ -234,7 +234,7 @@
 
 // Reduce
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
 // let total = 0;
 // for( let n of numbers ){
@@ -260,9 +260,24 @@ const numbers = [1, 2, 3, 4];
 
 // Includes
 
-function includes(array, searchElement) {
-  return array.includes(searchElement);
+// function includes(array, searchElement) {
+//   return array.includes(searchElement);
+// }
+
+// const inc = includes([1, 2, 3, 4], 2);
+// console.log(inc);
+
+// Except
+
+function except(array, excluded) {
+  let output = [];
+  for (let n of array) {
+    if (!excluded.includes(n)) {
+      output.push(n);
+    }
+  }
+  return output;
 }
 
-const inc = includes([1, 2, 3, 4], 2);
-console.log(inc);
+const numbers = except([1, 2, 3, 4, 5], [1, 2]);
+console.log(numbers);
