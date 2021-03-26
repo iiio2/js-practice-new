@@ -242,18 +242,27 @@ const numbers = [1, 2, 3, 4];
 // }
 // console.log(total);
 
-const total = numbers.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-});
-console.log(total);
+// const total = numbers.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// });
+// console.log(total);
 
-function arrayFromRange(min, max) {
-  let output = [];
-  for (let i = min; i <= max; i++) {
-    output.push(i);
-  }
-  return output;
+// function arrayFromRange(min, max) {
+//   let output = [];
+//   for (let i = min; i <= max; i++) {
+//     output.push(i);
+//   }
+//   return output;
+// }
+
+// const range = arrayFromRange(1, 5);
+// console.log(range);
+
+// Includes
+
+function includes(array, searchElement) {
+  return array.includes(searchElement);
 }
 
-const range = arrayFromRange(1, 5);
-console.log(range);
+const inc = includes([1, 2, 3, 4], 2);
+console.log(inc);
