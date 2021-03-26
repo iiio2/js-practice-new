@@ -284,26 +284,38 @@
 
 // Movies
 
-const movies = [
-  { title: 'a', year: 2018, rating: 4.5 },
-  { title: 'b', year: 2018, rating: 4.7 },
-  { title: 'c', year: 2018, rating: 3 },
-  { title: 'd', year: 2017, rating: 4.5 },
-];
+// const movies = [
+//   { title: 'a', year: 2018, rating: 4.5 },
+//   { title: 'b', year: 2018, rating: 4.7 },
+//   { title: 'c', year: 2018, rating: 3 },
+//   { title: 'd', year: 2017, rating: 4.5 },
+// ];
 
-console.log(movies);
+// console.log(movies);
 
-const filteredMovie = movies.filter(
-  (movie) => movie.year === 2018 && movie.rating > 4
-);
-const sortedMovie = filteredMovie.sort((a, b) => {
-  return b.rating - a.rating;
-});
+// const filteredMovie = movies.filter(
+//   (movie) => movie.year === 2018 && movie.rating > 4
+// );
+// const sortedMovie = filteredMovie.sort((a, b) => {
+//   return b.rating - a.rating;
+// });
 
-// const pickTitle = sortedMovie.forEach((movie) => console.log(movie.title));
+// // const pickTitle = sortedMovie.forEach((movie) => console.log(movie.title));
 
-// for (let movie of sortedMovie) {
-//   console.log(movie.title);
-// }
+// // for (let movie of sortedMovie) {
+// //   console.log(movie.title);
+// // }
 
-sortedMovie.map((movie) => movie.title).forEach((movie) => console.log(movie));
+// sortedMovie.map((movie) => movie.title).forEach((movie) => console.log(movie));
+
+// Function
+
+function sum(discount, ...args) {
+  const total = args.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
+  const discountPrice = total - (1 - discount);
+  return discountPrice;
+}
+
+console.log(sum(0.5, 1, 2, 3, 4, 5));
