@@ -310,12 +310,34 @@
 
 // Function
 
-function sum(discount, ...args) {
-  const total = args.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-  });
-  const discountPrice = total - (1 - discount);
-  return discountPrice;
-}
+// function sum(discount, ...args) {
+//   const total = args.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   });
+//   const discountPrice = total - (1 - discount);
+//   return discountPrice;
+// }
 
-console.log(sum(0.5, 1, 2, 3, 4, 5));
+// console.log(sum(0.5, 1, 2, 3, 4, 5));
+
+// Getter & Setter
+
+const person = {
+  firstName: 'Adam',
+  lastName: 'Smith',
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+person.fullName = 'John Smith';
+
+// getters => access properties
+// setters => change(mutate) properties
+
+console.log(person.fullName);
