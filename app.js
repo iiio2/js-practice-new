@@ -322,22 +322,70 @@
 
 // Getter & Setter
 
-const person = {
-  firstName: 'Adam',
-  lastName: 'Smith',
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  set fullName(value) {
-    const parts = value.split(' ');
-    this.firstName = parts[0];
-    this.lastName = parts[1];
+// const person = {
+//   firstName: 'Adam',
+//   lastName: 'Smith',
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   set fullName(value) {
+//     const parts = value.split(' ');
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   },
+// };
+
+// person.fullName = 'John Smith';
+
+// // getters => access properties
+// // setters => change(mutate) properties
+
+// console.log(person.fullName);
+
+// Sum of arguments
+
+function sum(...args) {
+  if (Array.isArray) {
+    const total = args.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    });
+    return total;
+  } else {
+    throw new Error('Sorry');
+  }
+}
+
+console.log(sum(1, 2, 3, 4));
+
+// Area of circle
+
+const circle = {
+  radius: null,
+  get area() {
+    return Math.PI * this.radius ** 2;
   },
 };
 
-person.fullName = 'John Smith';
+circle.radius = 2;
 
-// getters => access properties
-// setters => change(mutate) properties
+console.log(circle.area.toFixed(2));
 
-console.log(person.fullName);
+// Error handling
+
+try {
+  const numbers = 2;
+
+  const count = countOccurance(numbers);
+  console.log(count);
+} catch (e) {
+  console.log(e.message);
+}
+
+function countOccurance(array) {
+  if (!Array.isArray(array)) {
+    throw new Error('Invalid Array');
+  }
+  return array.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
+}
